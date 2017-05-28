@@ -1,0 +1,19 @@
+<ul class="nav navbar-nav navbar-right">
+@if(User.Identity.IsAuthenticated)
+{
+
+    <li>
+        <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @User.Identity.Name!</a>
+    </li>
+    <li>
+        <button type="submit" class="btn btn-link navbar-btn navbar-link">Log off</button>
+    </li>
+
+}
+else
+{
+     <li>
+        Not Logged In
+    </li>
+}
+</ul>
